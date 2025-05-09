@@ -6,7 +6,11 @@ This Magento 2 module provides ways to set already generated  **cut** and **crit
 
 It removes all the current CSS files from pages and let's you add two files: one will be inserted in **head** section of HTML, the other will be inserted at the bottom before **</body>**.
 
+Cut CSS file will be placed at the bottom of the page.
+
 ![Cut File](https://www.goivvy.com/media/cut-css-example.png)
+
+Critical CSS file will be placed in **head** section at the top of the page.
 
 ![Critical File](https://www.goivvy.com/media/critical-css-example.png)
 
