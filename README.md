@@ -2,7 +2,7 @@
 
 This Magento 2 module provides ways to set already generated  **cut** and **critical** CSS files for various page layouts.
 
-**Important:** _This extension doesn't remove redundant CSS nor does it help you create a critical CSS file. It mearly helps with placing already created files in right spots on Magento pages + it removes already existing Magento 2 CSS files. Contact [Magento developer](https://www.goivvy.com/contacts) for help with CSS optimization.
+***Important: This extension doesn't remove redundant CSS nor does it help you create a critical CSS file. It mearly helps with placing already created files in right spots on Magento pages + it removes already existing Magento 2 CSS files. Contact [Magento developer](https://www.goivvy.com/contacts) for help with CSS optimization.***
 
 It removes all the current CSS files from pages and let's you add two files: one will be inserted in **head** section of HTML, the other will be inserted at the bottom before **</body>**.
 
@@ -29,7 +29,7 @@ php bin/magento deploy:mode:set production
 
 Proceed to the configuration page at _Stores > Configuration > Goivvy LLC > CSS Optimizations_ and set up the extension.
 
-## Why Do I Need This Module
+## Why Do I Need This Module?
 
 It will place **cut** and **critical** CSS files in right spots thus improving Core Web Vitals.
 
