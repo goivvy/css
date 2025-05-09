@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * This source file is subject to the GNU General Public License (GNU version 3)
+ * It is available through the world-wide-web at this URL:
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to sales@goivvy.com so we can send you a copy immediately.
+ *
+ * @component  Goivvyllc_CSS
+ * @copyright  Copyright (c) 2025 GOIVVY LLC (https://www.goivvy.com)
+ * @license    https://www.gnu.org/licenses/gpl-3.0.en.html GNU General Public License version 3
+ * @author     Goivvy.com <sales@goivvy.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+  <system>
+    <tab id="goivvyllc" sortOrder="200" translate="label">
+       <label>Goivvy LLC</label>
+    </tab>
+    <section id="goivvycss" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1" translate="label">
+       <label>CSS Optimizations</label>
+       <tab>goivvyllc</tab>
+       <resource>Goivvyllc_CSS::config</resource>
+       <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>General</label>
+          <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+             <label>Enable CSS Optimizations</label>
+             <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>           
+             <comment><![CDATA[This option should be ON for any below settings to work. This option was added to that you could turn OFF optimizations for all pages without turning OFF optimizations for individual set of pages one by one. For custom requests contact <a target="_blank" href="https://www.goivvy.com">www.goivvy.com</a>]]></comment>
+          </field>        
+       </group>     
+       <group id="cut" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>Cut Unused CSS</label>
+          <field id="homepage" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+              <label>Enable CSS Optimizations on Homepage</label>
+              <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>           
+              <comment><![CDATA[When you turn this on along with Enable CSS Optimizations, all Magento .css files will be stripped from the Homepage. You will need to specify Homepage critical and/or Homepage cut filenames that will be used to style the Homepage]]></comment>
+          </field>         
+          <field id="critical_homepage_file" translate="label comment" type="text" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1">
+              <label>Homepage Critical CSS filename</label>
+              <depends>
+                 <field id="homepage">1</field>               
+              </depends>
+              <comment><![CDATA[Just the filename. For example file.css. The file should reside in app/code/Goivvyllc/CSS/view/frontend/web folder]]></comment>
+          </field>
+          <field id="homepage_file" translate="label comment" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+              <label>Homepage Cut CSS filename</label>
+              <depends>
+                 <field id="homepage">1</field>               
+              </depends>
+              <comment><![CDATA[Just the filename. For example file.css. The file should reside in app/code/Goivvyllc/CSS/view/frontend/web folder]]></comment>
+          </field>
+          <field id="category" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+               <label>Enable CSS Optimizations on Category Pages</label>
+               <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>            
+               <comment><![CDATA[When you turn this on along with Enable CSS Optimizations, all Magento .css files will be stripped from Category Pages. You will need to specify Category Page critical and/or Category Page Cut filenames that will be used to style Category Pages]]></comment>
+          </field>
+          <field id="critical_category_file" translate="label comment" type="text" sortOrder="24" showInDefault="1" showInWebsite="1" showInStore="1">
+              <label>Category Page Critical CSS filename</label>
+              <depends>
+                 <field id="category">1</field>               
+              </depends>
+              <comment><![CDATA[Just the filename. For example file.css. The file should reside in app/code/Goivvyllc/CSS/view/frontend/web folder]]></comment>
+          </field>
+          <field id="category_file" translate="label comment" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
+              <label>Category Page Cut CSS filename</label>
+              <depends>
+                 <field id="category">1</field>               
+              </depends>
+              <comment><![CDATA[Just the filename. For example file.css. The file should reside in app/code/Goivvyllc/CSS/view/frontend/web folder]]></comment>
+          </field>
+          <field id="product" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+               <label>Enable CSS Optimizations on Product Pages</label>
+               <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>           
+               <comment><![CDATA[When you turn this on along with Enable CSS Optimizations, all Magento .css files will be stripped from Product Pages. You will need to specify Product Page Critical and/or Product Page Cut filenames that will be used to style Product Pages]]></comment>
+          </field>
+          <field id="critical_product_file" translate="label comment" type="text" sortOrder="34" showInDefault="1" showInWebsite="1" showInStore="1">
+              <label>Product Page Critical CSS filename</label>
+              <depends>
+                 <field id="product">1</field>               
+              </depends>
+              <comment><![CDATA[Just the filename. For example file.css. The file should reside in app/code/Goivvyllc/CSS/view/frontend/web folder]]></comment>
+          </field>
+          <field id="product_file" translate="label comment" type="text" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">
+              <label>Product Page Cut CSS filename</label>
+              <depends>
+                 <field id="product">1</field>               
+              </depends>
+              <comment><![CDATA[Just the filename. For example file.css. The file should reside in app/code/Goivvyllc/CSS/view/frontend/web folder]]></comment>
+          </field>
+          <field id="custom" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+               <label>Enable CSS cut on a custom page for testing purposes</label>
+               <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>           
+               <comment><![CDATA[When you turn this on along with Enable CSS Optimizations, all Magento .css files will be stripped from the custom URL you set. You will need to specify Critical and/or Cut filenames that will be used to style the custom URL page]]></comment>
+          </field>
+          <field id="custom_url" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+               <label>Custom page URI (relative path) to turn CSS cut on (for testing purposes only)</label>           
+               <depends>
+                 <field id="custom">1</field>               
+               </depends>
+               <comment><![CDATA[For example /product.html , the leading slash is mandatory]]></comment>
+          </field>
+          <field id="critical_custom_file" translate="label comment" type="text" sortOrder="55" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom page critical CSS filename</label>
+                <depends>
+                   <field id="custom">1</field>
+                </depends>          
+              <comment><![CDATA[Just the filename. For example file.css. The file should reside in app/code/Goivvyllc/CSS/view/frontend/web folder]]></comment>
+          </field>
+          <field id="custom_file" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom page cut CSS filename</label>
+                <depends>
+                   <field id="custom">1</field>
+                </depends>          
+              <comment><![CDATA[Just the filename. For example file.css. The file should reside in app/code/Goivvyllc/CSS/view/frontend/web folder]]></comment>
+          </field>
+       </group>
+    </section>   
+  </system>
+</config>
